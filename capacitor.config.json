@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "jhon_ocampo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
