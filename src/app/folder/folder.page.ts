@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import 'prueba-jhonocampo';
+import { Plugins } from '@capacitor/core';
+
+const { JhonOcampo } = Plugins;
+
 
 @Component({
   selector: 'app-folder',
@@ -13,6 +18,14 @@ export class FolderPage implements OnInit {
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+  }
+
+  executeJhonOcampo() {
+    JhonOcampo.echo({value: 'plugin con jhonocampo.com'}).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.error(err);
+    })
   }
 
 }
